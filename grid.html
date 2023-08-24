@@ -3,49 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid Tailwind CSS</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Grid</title>
+    <style>
+        .container{
+            background-color: #c48b8b;
+            height: 100vh;
+            width: 100vw;
+            display: grid;
+           /* <!-- grid-template-columns: 100px 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px; --> 
+                
+            FR ->  1 Fraction of Entire Width
+                                                    */
+            grid-template-columns: repeat(3,1fr);
+            row-gap: 200px;
+            column-gap: 5px;
+        }
+        .items{
+            background-color: aqua;
+            height: 70px;
+           
+            margin: 10px;
+        }
+        #item1{
+                          /*  grid-column-start: 1;
+                grid-column-end: 3; */
+                grid-row-start: 1;
+                grid-row-end:3;
+        }
+    </style>
 </head>
-<body class="max-w-7xl mx-auto bg-gray-400" >
-    <h1 class="text-center font-bold mt-7">Hello World</h1>
-    <!-- Parent Div -->
-    <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
-        <div class="py-10 shadow-lg rounded overflow-hidden ">
-            <div class="">
-                    <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                    alt="" class="w-full">
-            </div>
-            <div class="font-bold text-xl text-center mt-5">
-                    <p class="text-center text-blue-800">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                         Hic nulla fugit velit quibusdam amet minima 
-                         </p>
-            </div>
-        </div>
+<body>
+    <h1>Grid - html CSS</h1>
+    <div class="container">
+        <div class="items" id="item1">One</div>
+        <div class="items">Two</div>
+        <div class="items">Three</div>
+        <div class="items">Four</div>
+        <div class="items">Five</div>
+        <div class="items">Six</div>
+        <div class="items">Seven</div>
+        <div class="items">Eight</div>
+        <div class="items">Nine</div>
+        <div class="items">Ten</div>
 
-        <div class="py-10 shadow-lg rounded overflow-hidden ">
-            <div class="">
-                    <img src="https://images.pexels.com/photos/669996/pexels-photo-669996.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                    alt="" class="w-full">
-            </div>
-            <div class="font-bold text-xl text-center mt-5">
-                    <p class="text-center text-blue-800">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                         Hic nulla fugit velit quibusdam amet minima 
-                         </p>
-            </div>
-        </div>
-
-
-        <div class="py-10 shadow-lg rounded overflow-hidden ">
-            <div class="">
-                    <img src="https://images.pexels.com/photos/9794458/pexels-photo-9794458.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                    alt="" class="w-full">
-            </div>
-            <div class="font-bold text-xl text-center mt-5">
-                    <p class="text-center text-blue-800">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                         Hic nulla fugit velit quibusdam amet minima 
-                         </p>
-            </div>
-        </div>
     </div>
 </body>
 </html>
